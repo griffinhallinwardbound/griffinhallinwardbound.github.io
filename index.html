@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  GRIFFIN HALL · INWARD BOUND  —  Home
+  ------------------------------------------------------------
+  HOW TO EDIT (quick guide — see README.txt for detail):
+   • Photos: find any block with class "photo-slot". Drop an
+     <img src="your-photo.jpg" class="filled" alt="..."> INSIDE
+     it and delete the placeholder text. Keep the class="filled".
+   • Text in [SQUARE BRACKETS] is a placeholder for you to fill.
+   • Countdown date lives in app.js (search "raceDate").
+  ============================================================
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Griffin Hall Inward Bound — Townies in the dark</title>
+<meta name="description" content="Griffin Hall's Inward Bound squad — ANU's non-residential hall, racing blindfolded through the bush around Canberra back to the secret Endpoint.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===== HEADER (identical on every page) ===== -->
+<header class="site-head">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Griffin Hall Inward Bound — home">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" stroke="var(--gold)" stroke-width="1.5"/>
+        <path d="M20 3 L23 20 L20 37 L17 20 Z" fill="var(--gold)"/>
+        <path d="M3 20 L20 17 L37 20 L20 23 Z" fill="var(--gold)" opacity="0.45"/>
+        <circle cx="20" cy="20" r="2.4" fill="var(--ink)"/>
+      </svg>
+      <span><b>GRIFFIN IB</b><span>ANU · Inward Bound</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.6"/></svg>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="history.html">History</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="sponsors.html">Sponsor</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <svg class="hero-svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <!-- contour lines -->
+    <g fill="none" style="stroke:var(--gold)" stroke-width="1">
+      <path d="M-40 520 C 200 470, 340 560, 560 500 S 920 400, 1240 470" opacity="0.10"/>
+      <path d="M-40 470 C 220 410, 380 500, 600 440 S 940 340, 1240 410" opacity="0.10"/>
+      <path d="M-40 420 C 240 360, 420 440, 640 380 S 960 290, 1240 350" opacity="0.10"/>
+      <path d="M300 640 C 420 520, 520 500, 640 420 S 800 300, 900 250" opacity="0.08"/>
+      <path d="M420 640 C 540 540, 620 520, 720 440 S 860 330, 940 290" opacity="0.08"/>
+      <path d="M540 640 C 640 560, 700 540, 800 470 S 900 380, 980 340" opacity="0.07"/>
+    </g>
+    <!-- route from the drop to the Endpoint: dotted plan + drawn traverse -->
+    <path d="M110 150 C 260 200, 300 330, 460 330 S 640 250, 760 340 S 900 470, 1030 450"
+          fill="none" style="stroke:var(--route)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 11" opacity="0.4"/>
+    <path class="route-line" d="M110 150 C 260 200, 300 330, 460 330 S 640 250, 760 340 S 900 470, 1030 450"
+          fill="none" style="stroke:var(--route)" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- drop marker -->
+    <g transform="translate(110,150)">
+      <circle r="9" fill="none" style="stroke:var(--paper)" stroke-width="1.5"/>
+      <path d="M-16 0H16M0 -16V16" style="stroke:var(--paper)" stroke-width="1" opacity="0.7"/>
+      <text x="18" y="-10" style="fill:var(--paper);font-family:var(--font-mono)" font-size="12" letter-spacing="1.5">THE DROP</text>
+      <text x="18" y="6" style="fill:var(--sage);font-family:var(--font-mono)" font-size="10">blindfolds off · 01:00</text>
+    </g>
+    <!-- endpoint marker -->
+    <g transform="translate(1030,450)">
+      <circle class="pulse" r="20" fill="none" style="stroke:var(--route)" stroke-width="1.5"/>
+      <path d="M0 -13 L3.8 -4 L13 -4 L5.5 2 L8.5 11 L0 5 L-8.5 11 L-5.5 2 L-13 -4 L-3.8 -4 Z" style="fill:var(--gold)"/>
+      <text x="-16" y="-28" text-anchor="middle" style="fill:var(--gold);font-family:var(--font-mono)" font-size="12" letter-spacing="1.5">ENDPOINT</text>
+      <text x="-16" y="-14" text-anchor="middle" style="fill:var(--sage);font-family:var(--font-mono)" font-size="10">secret until race day</text>
+    </g>
+  </svg>
+
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Griffin Hall · Non-residential · Est. 2010</span>
+    <h1>Known for kindness and humour</h1>
+    <p class="lede">Griffin is ANU's hall for off-campus students that hosts social, arts and sporting events. Once a year, students of Griffin Hall are blindfolded, driven into the bush, and left to find their own way home. This is Inward Bound.</p>
+    <div class="hero-cta">
+      <a href="about.html#coaches" class="btn solid">Meet the coaches</a>
+      <a href="about.html" class="btn ghost">More on Inward Bound?</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>35-100<span style="font-size:1rem">km</span></b><span>Distance</span></div>
+      <div class="stat"><b>7</b><span>Divisions</span></div>
+      <div class="stat"><b>1962</b><span>First Inward Bound Event</span></div>
+      <div class="stat"><b>04</b><span>Runners per team</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="pad">
+  <div class="wrap grid cols-2" style="align-items:center;gap:clamp(28px,5vw,64px)">
+    <div class="sec-head" style="margin:0">
+      <span class="eyebrow">The race</span>
+      <h2>A unique navigation based, endurance running event </h2>
+      <p class="prose"><span style="color:var(--paper)">Inward Bound is ANU's annual navigation-based endurance race, based on training exercises from World War 2.</span> Blindfolded teams of four are driven to a remote, unknown location around Canberra and are tasked with finding their location on a map using traditional map and compass methods, in the dark. The first team to get to the secret Endpoint wins its division. Griffin fields teams  from the 40-kilometre Division 7 to the brutal 100-kilometre Division 1.</p>
+      <a href="about.html" class="btn ghost mt-1">Read the full story</a>
+    </div>
+    <!-- PHOTO SLOT: a wide hero-style team shot works best here -->
+    <div class="photo-slot wide">
+      <img src="IMG_8406.JPG" class="filled" alt="Griffin squad photo">
+    </div>
+  </div>
+</section>
+
+<!-- ===== COUNTDOWN ===== -->
+<section class="pad">
+  <div class="wrap callout" style="text-align:center">
+    <span class="eyebrow" style="justify-content:center">Race weekend · 9th-10th October</span>
+    <h2 class="mt-1">Inward Bound begins in</h2>
+    <div id="countdown" class="countdown" style="justify-content:center"></div>
+    <p class="mt-2" style="margin-inline:auto">We host a variety of training exercises every week in preparation for IB, and we want you to run. You don't have to be a runner or a navigator; just be willing to try new things.<a href="contact.html" style="color:var(--gold)">Find out how to participate →</a></p>
+  </div>
+</section>
+  
+<!-- ===== PHOTO STRIP ===== -->
+<section class="pad-sm">
+  <div class="wrap">
+    <span class="eyebrow">From the field</span>
+    <div class="grid cols-3 mt-2">
+      <div class="photo-slot">
+        <img src="PXL_20251010_114609431.MP.jpg" class="filled" alt="Squad at work">
+      </div>
+      <div class="photo-slot">
+        <img src="86d0133a1e729a95991e48e4dc04c6a6.JPEG" class="filled" alt="Hmm lets see">
+      </div>
+      <div class="photo-slot">
+        <img src="2024.jpg" class="filled" alt="Hmm let us see">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="pad">
+  <div class="wrap grid cols-2" style="gap:clamp(20px,3vw,28px)">
+    <div class="callout">
+      <h2>Join Griffin Hall</h2>
+      <p>Any ANU student who isn't in a residential hall can be a Griffin. Just sign up for the semester and you can run or volunteer. T</p>
+      <a href="contact.html" class="btn solid mt-2">Get involved</a>
+    </div>
+    <div class="callout">
+      <h2>Back the squad</h2>
+      <p>Gear, transport, entry fees and training all cost money. Sponsors keep Griffin Hall going and get their name in front of the ANU community.</p>
+      <a href="sponsors.html" class="btn mt-2">Sponsorship options</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER (identical on every page) ===== -->
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html" style="margin-bottom:1rem">
+        <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="var(--gold)" stroke-width="1.5"/><path d="M20 3 L23 20 L20 37 L17 20 Z" fill="var(--gold)"/><path d="M3 20 L20 17 L37 20 L20 23 Z" fill="var(--gold)" opacity="0.45"/><circle cx="20" cy="20" r="2.4" fill="var(--ink)"/></svg>
+        <span><b>GRIFFIN IB</b><span>ANU · Inward Bound</span></span>
+      </a>
+      <p class="acknowledgement">Griffin Hall stands on the traditional lands of the Ngunnawal and Ngambri peoples, and we run on the lands of many First Nations peoples. We pay our respects to Elders past, present and emerging, and acknowledge that sovereignty was never ceeded.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="about.html">About &amp; the sport</a>
+      <a href="history.html">History &amp; results</a>
+      <a href="gallery.html">Photo gallery</a>
+      <a href="sponsors.html">Sponsorship</a>
+      <a href="contact.html">Contact &amp; join</a>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <!-- [Replace # with your real links] -->
+      <a href="https://www.instagram.com/griffinhallinwardbound/">Instagram — @griffinhallinwardbound</a>
+      <a href="https://www.facebook.com/share/g/199jnftzcS/">Facebook — Griffin Inward Bound</a>
+      <a href="mailto:griffinhall.inwardbound@anu.edu.au">griffinhall.inwardbound@anu.edu.au</a>
+      <a href="https://anuinwardbound.com" target="_blank" rel="noopener">Official IB site ↗</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p>© <span id="yr">2026</span> Griffin Hall Inward Bound</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
